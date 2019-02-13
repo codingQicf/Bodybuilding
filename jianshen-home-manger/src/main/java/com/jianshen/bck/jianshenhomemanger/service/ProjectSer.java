@@ -39,7 +39,7 @@ public class ProjectSer {
     	 dao.deleteById(id);
     }
     
-    public List<Project> ProjectList(String ptype) {
+    public List<Project> ProjectList(String ptype,Integer count) {
     	Project project = new Project();
     	if(!ptype.isEmpty() && ptype!="") {
     		project.setPtype(ptype);
@@ -47,7 +47,11 @@ public class ProjectSer {
     		List<Project> list = dao.findAll(example);
     		return list;
     	}
-    	return dao.getProjectList();
+    	return dao.getProjectList(count);
+    }
+    
+    public List<String> getProjectTypeList(){
+		return dao.getTypeList();
     }
     
 }

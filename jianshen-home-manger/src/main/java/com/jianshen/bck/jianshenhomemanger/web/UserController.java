@@ -170,10 +170,10 @@ public class UserController {
     }
     
    
-    @GetMapping("/1008/{count}")
+    @GetMapping("/1008")
     @ApiOperation(value="教练列表查询",notes="教练列表查询，每次返回8条数据")
     @Transactional(propagation = Propagation.SUPPORTS) // 查询用SUPPORTS 增删改用REQUIRED
-    public Result getCoachUserList(@PathVariable("count")Integer count){
+    public Result getCoachUserList(Integer count){
     	Result result = new Result();
     	List<User> coachList = ser.getCoachList(count);
     	if(coachList!=null) {

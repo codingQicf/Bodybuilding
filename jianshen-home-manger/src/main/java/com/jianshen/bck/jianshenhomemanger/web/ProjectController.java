@@ -44,9 +44,9 @@ public class ProjectController {
     @GetMapping("/2002")
     @ApiOperation(value="显示Project列表8条", notes="显示Project列表8条")
     @Transactional(propagation = Propagation.SUPPORTS) // 查询用SUPPORTS 增删改用REQUIRED
-    public Result getProjectList(String ptype){
+    public Result getProjectList(String ptype,Integer count){
         Result result = new Result();
-        List<Project> ProjectList =ser.ProjectList(ptype);  
+        List<Project> ProjectList =ser.ProjectList(ptype,count);  
         result.setData(ProjectList);
         result.setOk(Result.ok().getOk()); 
         result.setStatus(200);
@@ -137,6 +137,18 @@ public class ProjectController {
 	    result.setStatus(200);
 	    result.setMsg("删除Project成功"); 
         return result;
+    }
+    
+    @GetMapping("/2007")
+    @ApiOperation(value="获取peoject类型列表",notes="获取peoject类型列表")
+    @Transactional(propagation = Propagation.SUPPORTS) // 查询用SUPPORTS 增删改用REQUIRED
+    public Result getprojectType() {
+    	Result result = new Result();
+    	List<String> projectTypeList = ser.getProjectTypeList();
+    	result.setData(projectTypeList);
+    	result.setOk(Result.ok().getOk());
+    	result.setMsg("获得产品类型列表");
+    	return result;
     }
     
 }
