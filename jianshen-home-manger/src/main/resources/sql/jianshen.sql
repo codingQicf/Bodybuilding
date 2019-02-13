@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50173
-Source Host           : 127.0.0.1:3306
+Source Server Version : 50556
+Source Host           : localhost:3306
 Source Database       : jianshen
 
 Target Server Type    : MYSQL
-Target Server Version : 50173
+Target Server Version : 50556
 File Encoding         : 65001
 
-Date: 2019-01-28 22:14:17
+Date: 2019-02-13 13:49:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `hibernate_sequence` (
 -- ----------------------------
 -- Records of hibernate_sequence
 -- ----------------------------
-INSERT INTO `hibernate_sequence` VALUES ('1');
+INSERT INTO `hibernate_sequence` VALUES ('2');
 
 -- ----------------------------
 -- Table structure for t_ban
@@ -53,14 +53,16 @@ DROP TABLE IF EXISTS `t_hello`;
 CREATE TABLE `t_hello` (
   `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_hello
 -- ----------------------------
-INSERT INTO `t_hello` VALUES ('1', 'das');
-INSERT INTO `t_hello` VALUES ('2', 'fdsf');
+INSERT INTO `t_hello` VALUES ('1', 'das', null, null);
+INSERT INTO `t_hello` VALUES ('2', 'fdsf', null, null);
 
 -- ----------------------------
 -- Table structure for t_js
@@ -101,16 +103,24 @@ CREATE TABLE `t_news` (
 -- ----------------------------
 DROP TABLE IF EXISTS `t_project`;
 CREATE TABLE `t_project` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `pname` varchar(255) DEFAULT NULL COMMENT '项目名称',
   `ptype` varchar(255) DEFAULT NULL COMMENT '项目分类',
   `pcomment` varchar(255) DEFAULT NULL COMMENT '项目评价（一个项目2个评价，那就是2条数据，查询项目列表时注意group下）',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_project
 -- ----------------------------
+INSERT INTO `t_project` VALUES ('1', '抬腿跳', '无氧运动', '123');
+INSERT INTO `t_project` VALUES ('2', '运动', '减脂运动', '123');
+INSERT INTO `t_project` VALUES ('3', '运动2', '有氧运动', '123');
+INSERT INTO `t_project` VALUES ('4', '运动3', '拉伸运动', '123');
+INSERT INTO `t_project` VALUES ('5', '运动4', '拉伸运动', '123');
+INSERT INTO `t_project` VALUES ('6', '高踢腿', '拉伸运动', '123');
+INSERT INTO `t_project` VALUES ('7', '长跑', '有氧运动', '123');
+INSERT INTO `t_project` VALUES ('8', '仰卧起坐', '无氧运动', '123');
 
 -- ----------------------------
 -- Table structure for t_user
@@ -125,9 +135,14 @@ CREATE TABLE `t_user` (
   `nickname` varchar(255) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `sex` varchar(255) DEFAULT NULL COMMENT '男，女 字符串表示',
+  `name` varchar(20) DEFAULT NULL,
+  `describe` varchar(255) DEFAULT NULL,
+  `is_js` int(11) DEFAULT NULL,
+  `is_pm` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
+INSERT INTO `t_user` VALUES ('1', 'test111', 'pwd1111', '1', '0', null, null, null, null, null, null, null);
