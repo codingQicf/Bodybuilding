@@ -42,6 +42,9 @@ public class User {
     @Column(length = 20)
     private String name;
     
+    @Column(length = 255)
+    private String describe;
+    
     public Integer getId() {
         return id;
     }
@@ -92,6 +95,14 @@ public class User {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	public String getDescribe() {
+		return describe;
+	}
+
+	public void setDescribe(String describe) {
+		this.describe = describe;
 	}
 
 	public String getSex() {
