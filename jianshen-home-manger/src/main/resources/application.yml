@@ -1,0 +1,28 @@
+#Spring
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///jianshen
+    username: root
+    password: root
+    
+  
+
+#SpringData
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+
+#MVC
+  mvc:
+    static-path-pattern: /**
+
+#tomcat
+server:
+  port: 90
+  tomcat:
+    max-threads: 7000
+    max-connections: 30000
