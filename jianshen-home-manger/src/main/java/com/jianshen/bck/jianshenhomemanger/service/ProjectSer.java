@@ -1,5 +1,9 @@
 package com.jianshen.bck.jianshenhomemanger.service;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import javax.print.attribute.HashAttributeSet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -50,8 +54,13 @@ public class ProjectSer {
     	return dao.getProjectList(count);
     }
     
-    public List<String> getProjectTypeList(){
-		return dao.getTypeList();
+    public Map<String,List<Object>> getProjectTypeList(){
+    	Map<String,List<Object>> map = new HashMap<>();
+    	for (String string : dao.getTypeList()) {
+			List<Object> prolist =  dao.getProjectBytype(string);
+			map.put(string,prolist);
+		}
+		return map;
     }
     
 }

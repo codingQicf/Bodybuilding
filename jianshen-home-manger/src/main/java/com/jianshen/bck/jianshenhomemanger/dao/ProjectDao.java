@@ -20,12 +20,14 @@ public interface ProjectDao extends JpaRepository<Project,Integer> {
 	@Query(value="select * from t_project LIMIT :count,8",nativeQuery=true)
 	List<Project> getProjectList(@Param("count")Integer count);
 	
-	
 	@Query(value="select * from t_project WHERE id=:id",nativeQuery=true)
 	Project getProjectById(@Param("id")Integer id);
 	
 	@Query(value="select ptype from t_project group by ptype",nativeQuery=true)
 	List<String> getTypeList();
+
+	@Query(value="select * from t_project where ptype = :ptype",nativeQuery=true)
+	List<Object> getProjectBytype(@Param("ptype")String string);
 	
 }
 

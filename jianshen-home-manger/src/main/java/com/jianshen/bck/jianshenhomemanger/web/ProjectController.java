@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 //@ApiModel("hello模块")
@@ -144,7 +145,7 @@ public class ProjectController {
     @Transactional(propagation = Propagation.SUPPORTS) // 查询用SUPPORTS 增删改用REQUIRED
     public Result getprojectType() {
     	Result result = new Result();
-    	List<String> projectTypeList = ser.getProjectTypeList();
+    	Map<String, List<Object>> projectTypeList = ser.getProjectTypeList();
     	result.setData(projectTypeList);
     	result.setOk(Result.ok().getOk());
     	result.setMsg("获得产品类型列表");
