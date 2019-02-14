@@ -1,0 +1,20 @@
+/* pages/login/login.wxss */
+.title_font_css1{
+  line-height: 40px;
+  margin-left: 6.2rem;
+  font-size: 23px;
+}
+.title_font_css2{
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+}
+page{
+  background-color:black;
+}
+
+text{
+  color: white
+}
+
+

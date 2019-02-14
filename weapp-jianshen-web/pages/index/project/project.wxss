@@ -1,0 +1,12 @@
+
+.projectList{
+  position: relative;
+  bottom: 2.5rem;
+  left: 3.2rem;
+}
+
+
+.desc_css{
+  color:gray;
+  font-size: 12px;
+}

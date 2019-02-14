@@ -1,0 +1,24 @@
+<view class="i-sticky-demo">
+  <i-sticky scrollTop="{{scrollTop}}">
+    <i-sticky-item i-class="i-sticky-demo-title">
+      <block wx:for="{{projectlist}}">
+        <view slot="content">
+          {{item[0][2]}}
+        </view>
+        <view slot="content">
+          <i-panel title="">
+            <block wx:for="{{projectlist[index]}}">
+              <view style="padding: 15px;height:2rem">
+                <image style="width:2.2rem;height:2.2rem" src="https://static.easyicon.net/preview/117/1171971.gif"></image>
+                <view class="projectList">
+                  <text style='display:block;line-height:20px'>{{item[1]}}</text>
+                  <text class='desc_css' style='margin:1.25rem;'>{{item[3]}}</text>
+                </view>
+              </view>
+            </block>
+          </i-panel>
+        </view>
+      </block>
+    </i-sticky-item>
+  </i-sticky>
+</view>

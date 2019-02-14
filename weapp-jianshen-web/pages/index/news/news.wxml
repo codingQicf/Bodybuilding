@@ -1,0 +1,35 @@
+<view class='top_title_css'>
+
+<i-button bind:click="uploadMe" type="primary">上传我的资讯</i-button>
+
+<view hidden="{{showMeFlag}}">
+    <text>请输入资讯标题</text><input></input>
+    <text>请输入资讯标题</text><input></input>
+    <i-button bind:click="handleClick" type="success" shape="circle" size="small">提交</i-button>
+</view>
+    
+
+</view>
+
+
+<i-card title="我今天运动" extra="详情" bindtap="showDetail">
+    <view slot="content">内容不错。。。</view>
+    <view slot="footer">2019年1月29日12:22:32</view>
+</i-card>
+
+<i-card title="卡片标题" extra="详情"  bindtap="showDetail">
+    <view slot="content">内容不错</view>
+    <view slot="footer">2019年1月29日12:22:34</view>
+</i-card>
+
+<i-card title="卡片标题" extra="详情" bindtap="showDetail">
+    <view slot="content">内容不错</view>
+    <view slot="footer">2019年1月29日12:22:34</view>
+</i-card>
+
+<i-card title="卡片标题" extra="详情"  bindtap="showDetail">
+    <view slot="content">内容不错</view>
+    <view slot="footer">2019年1月29日12:22:34</view>
+</i-card>
+
+

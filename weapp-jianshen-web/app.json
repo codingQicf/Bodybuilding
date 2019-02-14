@@ -1,0 +1,105 @@
+{
+  "pages": [
+    "pages/index/project/project",
+    "pages/index/news/news",
+    "pages/login/login",
+    "pages/index/index", 
+    "pages/index/news/detail/detail",
+    "pages/index/me/me",
+    "pages/logs/logs",
+    "pages/mange/mange",
+    "pages/mange/user/user",
+    "pages/mange/project/project",
+    "pages/index/teacher/teacher"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "健身信息服务",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-button": "../../dist/button/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-panel": "../../dist/panel/index",
+    "i-card": "../../dist/card/index",
+    "i-icon": "../../dist/icon/index",
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-drawer": "../../dist/drawer/index",
+    "i-page": "../../dist/page/index",
+    "i-steps": "../../dist/steps/index",
+    "i-step": "../../dist/step/index",
+    "i-notice-bar": "../../dist/notice-bar/index",
+    "i-index": "../../dist/index/index",
+    "i-index-item": "../../dist/index-item/index",
+    "i-sticky": "../../dist/sticky/index",
+    "i-sticky-item": "../../dist/sticky-item/index",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-toast": "../../dist/toast/index",
+    "i-modal": "../../dist/modal/index",
+    "i-message": "../../dist/message/index",
+    "i-spin": "../../dist/spin/index",
+    "i-swipeout": "../../dist/swipeout/index",
+    "i-badge": "../../dist/badge/index",
+    "i-alert": "../../dist/alert/index",
+    "i-tag": "../../dist/tag/index",
+    "i-progress": "../../dist/progress/index",
+    "i-avatar": "../../dist/avatar/index",
+    "i-collapse": "../../dist/collapse/index",
+    "i-collapse-item": "../../dist/collapse-item/index",
+    "i-count-down": "../../dist/count-down/index",
+    "i-divider": "../../dist/divider/index",
+    "i-load-more": "../../dist/load-more/index",
+    "i-input": "../../dist/input/index",
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index",
+    "i-checkbox-group": "../../dist/checkbox-group/index",
+    "i-checkbox": "../../dist/checkbox/index",
+    "i-switch": "../../dist/switch/index",
+    "i-rate": "../../dist/rate/index",
+    "i-input-number": "../../dist/input-number/index"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "static/images/home.png",
+        "iconPath": "static/images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "static/images/xm.png",
+        "iconPath": "static/images/xm.png",
+        "pagePath": "pages/index/project/project",
+        "text": "项目"
+      },
+      {
+        "selectedIconPath": "static/images/zx.png",
+        "iconPath": "static/images/zx.png",
+        "pagePath": "pages/index/news/news",
+        "text": "资讯"
+      },
+      {
+        "selectedIconPath": "static/images/jl.png",
+        "iconPath": "static/images/jl.png",
+        "pagePath": "pages/index/teacher/teacher",
+        "text": "教练"
+      },
+      {
+        "selectedIconPath": "static/images/me.png",
+        "iconPath": "static/images/me.png",
+        "pagePath": "pages/index/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}

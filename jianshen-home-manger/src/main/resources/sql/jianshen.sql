@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50556
 File Encoding         : 65001
 
-Date: 2019-02-13 13:49:02
+Date: 2019-02-14 16:28:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `hibernate_sequence` (
 -- ----------------------------
 -- Records of hibernate_sequence
 -- ----------------------------
-INSERT INTO `hibernate_sequence` VALUES ('2');
+INSERT INTO `hibernate_sequence` VALUES ('5');
 
 -- ----------------------------
 -- Table structure for t_ban
@@ -113,14 +113,14 @@ CREATE TABLE `t_project` (
 -- ----------------------------
 -- Records of t_project
 -- ----------------------------
-INSERT INTO `t_project` VALUES ('1', '抬腿跳', '无氧运动', '123');
-INSERT INTO `t_project` VALUES ('2', '运动', '减脂运动', '123');
-INSERT INTO `t_project` VALUES ('3', '运动2', '有氧运动', '123');
-INSERT INTO `t_project` VALUES ('4', '运动3', '拉伸运动', '123');
-INSERT INTO `t_project` VALUES ('5', '运动4', '拉伸运动', '123');
-INSERT INTO `t_project` VALUES ('6', '高踢腿', '拉伸运动', '123');
-INSERT INTO `t_project` VALUES ('7', '长跑', '有氧运动', '123');
-INSERT INTO `t_project` VALUES ('8', '仰卧起坐', '无氧运动', '123');
+INSERT INTO `t_project` VALUES ('1', '抬腿跳', '无氧运动', '描述运动怎么这么好啊');
+INSERT INTO `t_project` VALUES ('2', '运动', '减脂运动', '描述运动怎么这么好啊');
+INSERT INTO `t_project` VALUES ('3', '运动2', '有氧运动', '描述运动怎么这么好啊');
+INSERT INTO `t_project` VALUES ('4', '运动3', '拉伸运动', '描述运动怎么这么好啊');
+INSERT INTO `t_project` VALUES ('5', '运动4', '拉伸运动', '描述运动怎么这么好啊');
+INSERT INTO `t_project` VALUES ('6', '高踢腿', '拉伸运动', '描述运动怎么这么好啊');
+INSERT INTO `t_project` VALUES ('7', '长跑', '有氧运动', '描述运动怎么这么好啊');
+INSERT INTO `t_project` VALUES ('8', '仰卧起坐', '无氧运动', '描述运动怎么这么好啊');
 
 -- ----------------------------
 -- Table structure for t_user

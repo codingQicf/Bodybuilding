@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<!-- 登录 -->
+<text class="title_font_css1">健身信息服务</text>
+<view >
+ <video style="width: 100%;height=400px;margin:1px;" src="{{videoUrl}}" binderror="videoErrorCallback" autoplay="true" muted="false" show-fullscreen-btn="false" show-play-btn="false"  controls="false"></video>
+</view>
+
+<view class='container2'>
+  <text class="title_font_css2">—— 登录 ——</text>
+</view>
+  
+  <i-input value="{{ username }}" type="text" right title="用户名" mode="wrapped" placeholder="请输入用户名" />
+    <i-input value="{{ password }}" type="number" right  title="密码"  mode="wrapped"  placeholder="请输入密码" />
+
+
+    <i-button bindtap="loginClick" type="info" shape="circle">登录 / 注册</i-button>
+
+
+
+
+
+
+
+
+
+<i-toast id="toast" />

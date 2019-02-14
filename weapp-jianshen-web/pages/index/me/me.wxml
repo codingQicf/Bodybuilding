@@ -1,0 +1,16 @@
+<!--pages/index/me/me.wxml-->
+
+<i-cell-group>
+    <image class="user_header" src='https://www.easyicon.net/api/resizeApi.php?id=1230160&size=128'></image>
+    <i-cell title="名称 aaa" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="性别 男" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="年龄 42" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="我的教练" is-link url="/pages/dashboard/index"></i-cell>
+
+    <i-cell>
+      <i-button bindtap="exituser" type="error">注销</i-button>
+    </i-cell>
+
+</i-cell-group>
+
+
